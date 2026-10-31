@@ -1,0 +1,5 @@
+state,district,latitude,longitude,date,brightness_k,frp_mw,confidence_pct,satellite,source
+Odisha,Mayurbhanj,21.8500,86.3500,2026-03-12,342.5,84.2,92,MODIS,NASA_FIRMS
+Uttarakhand,Garhwal,30.2200,78.7800,2026-04-18,338.0,76.5,88,VIIRS,NASA_FIRMS
+Madhya Pradesh,Bandhavgarh,23.7000,81.0200,2026-03-29,345.1,95.0,94,MODIS,NASA_FIRMS
+Chhattisgarh,Bastar,19.1000,81.9500,2026-04-02,330.4,62.1,85,VIIRS,NASA_FIRMS

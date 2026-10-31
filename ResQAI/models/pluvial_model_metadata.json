@@ -1,0 +1,33 @@
+{
+  "model_name": "Pluvial Flood Susceptibility Classifier",
+  "algorithm": "RandomForestClassifier(n_estimators=100, max_depth=12)",
+  "features": [
+    "Slope",
+    "Curvature ",
+    "Aspect",
+    "TWI",
+    "FA",
+    "Drainage",
+    "Rainfall"
+  ],
+  "classes": [
+    "High",
+    "Low",
+    "Moderate",
+    "No_Flood",
+    "Very_High"
+  ],
+  "accuracy": 1.0,
+  "total_records_analyzed": 144013,
+  "training_samples": 40000,
+  "feature_importances": {
+    "Slope": 0.0036,
+    "Curvature ": 0.0029,
+    "Aspect": 0.0043,
+    "TWI": 0.0045,
+    "FA": 0.0028,
+    "Drainage": 0.9786,
+    "Rainfall": 0.0033
+  },
+  "last_trained": "2026-10-31 13:00:48"
+}

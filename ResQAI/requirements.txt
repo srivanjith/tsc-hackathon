@@ -1,0 +1,10 @@
+streamlit>=1.38,<2.0
+pymongo[srv]>=4.8,<5.0
+pandas>=2.0,<3.0
+numpy>=1.26,<3.0
+scikit-learn>=1.4,<2.0
+networkx>=3.2,<4.0
+folium>=0.17,<1.0
+streamlit-folium>=0.23,<1.0
+plotly>=5.22,<7.0
+python-dotenv>=1.0,<2.0

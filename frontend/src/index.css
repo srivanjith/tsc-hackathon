@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F5F8FC;
+  --sidebar-bg: #102B46;
+  --primary-blue: #1677D2;
+  --critical-red: #DC3545;
+  --warning-amber: #F59E0B;
+  --success-green: #16A36A;
+  --card-border: #E2E8F0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: #1E293B;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Pulsing radar for critical emergency pins */
+@keyframes critical-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+.pulse-critical {
+  animation: critical-pulse 2s infinite;
+}
+
+/* Leaflet container */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+}

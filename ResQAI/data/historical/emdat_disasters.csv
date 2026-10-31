@@ -1,0 +1,6 @@
+disaster_id,disaster_type,country,state,year,deaths,total_affected,economic_damage_usd,source
+EMDAT-IND-2024-01,Flood,India,Assam,2024,48,1250000,45000000,EM_DAT
+EMDAT-IND-2024-02,Cyclone,India,Odisha,2024,14,890000,120000000,EM_DAT
+EMDAT-IND-2024-03,Landslide,India,Kerala,2024,230,12500,18000000,EM_DAT
+EMDAT-IND-2023-01,Flood,India,Himachal Pradesh,2023,105,450000,68000000,EM_DAT
+EMDAT-IND-2023-02,Earthquake,India,Uttarakhand,2023,6,15000,8500000,EM_DAT

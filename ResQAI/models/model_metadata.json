@@ -1,0 +1,15 @@
+{
+  "model": "RandomForestClassifier",
+  "features": [
+    "rainfall_24h_mm",
+    "rainfall_72h_mm",
+    "population_exposed",
+    "medical_urgency",
+    "vulnerable_population",
+    "source_reliability",
+    "hazard_type"
+  ],
+  "target": "risk_label",
+  "rows": 60,
+  "evaluation": "Random split baseline only. Validate with event-, time- and region-held-out tests."
+}

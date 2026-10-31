@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "us7000m8v1",
+      "properties": {
+        "mag": 6.4,
+        "place": "18 km NNE of Chamoli, Uttarakhand, India",
+        "time": 1723612800000,
+        "updated": 1723620000000,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 650,
+        "net": "us",
+        "code": "7000m8v1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.3300, 30.4100, 12.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000k4p2",
+      "properties": {
+        "mag": 5.2,
+        "place": "32 km E of Joshimath, Uttarakhand, India",
+        "time": 1718220000000,
+        "updated": 1718230000000,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 420,
+        "net": "us",
+        "code": "7000k4p2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.8800, 30.5600, 15.0]
+      }
+    }
+  ]
+}
