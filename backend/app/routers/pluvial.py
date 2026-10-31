@@ -4,28 +4,34 @@ from typing import Dict, Any, List
 import sys
 from pathlib import Path
 
-# Add project root to path to access engines
-sys.path.append(str(Path(__file__).resolve().parents[3] / "ResQAI"))
+# Add project root and ResQAI directory to sys.path
+_project_root = Path(__file__).resolve().parents[3]
+_resqai_path = str(_project_root / "ResQAI")
+_workspace_path = str(_project_root)
+if _resqai_path not in sys.path:
+    sys.path.append(_resqai_path)
+if _workspace_path not in sys.path:
+    sys.path.append(_workspace_path)
 
 try:
+    from ResQAI.engines.pluvial_engine import (
+        predict_pluvial_susceptibility,
+        get_pluvial_metadata,
+        get_spatial_sample
+    )
+except ImportError:
     try:
+        # pyrefly: ignore[missing-import]
         from engines.pluvial_engine import (
             predict_pluvial_susceptibility,
             get_pluvial_metadata,
             get_spatial_sample
         )
     except ImportError:
-        # pyrefly: ignore[missing-import]
-        from engines.pluvial import (
-            predict_pluvial_susceptibility,
-            get_pluvial_metadata,
-            get_spatial_sample
-        )
-except ImportError:
-    # Standalone fallback if ResQAI not in path
-    predict_pluvial_susceptibility = None
-    get_pluvial_metadata = None
-    get_spatial_sample = None
+        # Standalone fallback if ResQAI not in path
+        predict_pluvial_susceptibility = None
+        get_pluvial_metadata = None
+        get_spatial_sample = None
 
 router = APIRouter(prefix="/api/pluvial", tags=["Pluvial Flood Intelligence"])
 
