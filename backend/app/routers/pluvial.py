@@ -8,11 +8,19 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[3] / "ResQAI"))
 
 try:
-    from engines.pluvial_engine import (
-        predict_pluvial_susceptibility,
-        get_pluvial_metadata,
-        get_spatial_sample
-    )
+    try:
+        from engines.pluvial_engine import (
+            predict_pluvial_susceptibility,
+            get_pluvial_metadata,
+            get_spatial_sample
+        )
+    except ImportError:
+        # pyrefly: ignore[missing-import]
+        from engines.pluvial import (
+            predict_pluvial_susceptibility,
+            get_pluvial_metadata,
+            get_spatial_sample
+        )
 except ImportError:
     # Standalone fallback if ResQAI not in path
     predict_pluvial_susceptibility = None
