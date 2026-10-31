@@ -1,0 +1,7 @@
+# Git Attributes
+# Explicitly declare binary files to prevent line-ending conversion and ensure GitHub renders PDFs in its document viewer
+*.pdf binary
+*.pkl binary
+*.xlsx binary
+*.db binary
+*.sqlite binary
